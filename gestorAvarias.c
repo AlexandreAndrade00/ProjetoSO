@@ -1,0 +1,14 @@
+//
+// Created by alexandre on 15/03/21.
+//
+
+#include "gestorAvarias.h"
+#include <stdio.h>
+#include <unistd.h>
+
+//main do gestor de avarias
+void mainGestorAvarias(int *configOptions) {
+    printf("Gestor de avarias operacional!\n");
+    sleep(5);
+    printf("morri\n");
+}
