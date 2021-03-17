@@ -8,51 +8,11 @@
 
 /home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h
 
-/home/alexandre/CLionProjects/ProjetoSO/files.c
-stdio.h
--
-stdlib.h
--
-string.h
--
-files.h
 /home/alexandre/CLionProjects/ProjetoSO/files.h
-
-/home/alexandre/CLionProjects/ProjetoSO/files.h
-
-/home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.c
-gestorAvarias.h
-/home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.h
-main.h
-/home/alexandre/CLionProjects/ProjetoSO/main.h
-stdlib.h
--
-stdio.h
--
-unistd.h
--
 
 /home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.h
 
-/home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.c
-gestorCorrida.h
 /home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.h
-gestorEquipas.h
-/home/alexandre/CLionProjects/ProjetoSO/gestorEquipas.h
-main.h
-/home/alexandre/CLionProjects/ProjetoSO/main.h
-SLinkedListManipulation.h
-/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-
-/home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.h
-
-/home/alexandre/CLionProjects/ProjetoSO/gestorEquipas.h
 
 /home/alexandre/CLionProjects/ProjetoSO/main.c
 stdio.h

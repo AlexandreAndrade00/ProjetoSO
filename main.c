@@ -23,6 +23,7 @@ sharedMemory *sharedVar;
 int main(int argc, char *argv[]) {
 
     initilization();
+    printf("teste\n");
     sleep(10);
 
     printf("Simulador de corrida operacional!\n");
