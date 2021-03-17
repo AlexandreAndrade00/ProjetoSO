@@ -10,33 +10,33 @@
 #include "files.h"
 #include "gestorCorrida.h"
 #include "gestorAvarias.h"
+#include "SLinkedListManipulation.h"
+#include "main.h"
 
-void initilization();
-
-typedef struct {
-    //TODO
-    int var;
-} sharedMemory;
-
+//id memoria partilahada
 int shmid;
+
+//variavel onde esta alocada a memoria
 sharedMemory *sharedVar;
-int *configOptions;
 
 //SIMULADOR DE CORRIDA - PROCESSO PRINCIPAL
 int main(int argc, char *argv[]) {
 
     initilization();
+    sleep(10);
 
     printf("Simulador de corrida operacional!\n");
-    sleep(10);
 
     //desalocar memoria partilhada
     shmctl(shmid, IPC_RMID, NULL);
+
     return 0;
 }
 
 //inicializacao da memoria partilhada e processos
 void initilization() {
+
+    int *configOptions;
 
     //criacao da memoria partilhada
     shmid = shmget("SHM", sizeof(sharedMemory), IPC_CREAT|0700);
@@ -45,9 +45,12 @@ void initilization() {
     //array com configuracoes
     configOptions = readConfigFile();
 
+    //guardar configuracoes na memoria partilhada
+    sharedVar->configOptions=configOptions;
+
     //criar processo gestor de corrida
     if (fork()==0) {
-        mainGestorCorridas(configOptions);
+        mainGestorCorrida(configOptions);
         exit(0);
     }
 
@@ -57,4 +60,3 @@ void initilization() {
         exit(0);
     }
 }
-

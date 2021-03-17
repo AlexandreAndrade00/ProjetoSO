@@ -11,3 +11,7 @@ void mainGestorEquipas(const int *configOptions) {
     printf("Gestor de Equipas operacional!\n");
     sleep(3);
 }
+
+void *car(void *arguments) {
+    //TODO
+}
