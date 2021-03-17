@@ -30,7 +30,6 @@ int* readConfigFile() {
             }
         }
     }
-
     fclose(fptr);
     return configOptions;
 }

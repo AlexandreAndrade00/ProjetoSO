@@ -3,6 +3,8 @@
 //
 
 #include "gestorAvarias.h"
+#include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
@@ -10,5 +12,4 @@
 void mainGestorAvarias(int *configOptions) {
     printf("Gestor de avarias operacional!\n");
     sleep(5);
-    printf("morri\n");
 }

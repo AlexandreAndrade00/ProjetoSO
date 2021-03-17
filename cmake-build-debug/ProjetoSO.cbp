@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.c">
+			<Option target="ProjetoSO"/>
+		</Unit>
+		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h">
+			<Option target="ProjetoSO"/>
+		</Unit>
 		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/files.c">
 			<Option target="ProjetoSO"/>
 		</Unit>
@@ -101,6 +107,9 @@
 			<Option target="ProjetoSO"/>
 		</Unit>
 		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/main.c">
+			<Option target="ProjetoSO"/>
+		</Unit>
+		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/main.h">
 			<Option target="ProjetoSO"/>
 		</Unit>
 		<Unit filename="/home/alexandre/CLionProjects/ProjetoSO/CMakeLists.txt">

@@ -143,6 +143,33 @@ ProjetoSO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetoSO.dir/build.make CMakeFiles/ProjetoSO.dir/build
 .PHONY : ProjetoSO/fast
 
+SLinkedListManipulation.o: SLinkedListManipulation.c.o
+
+.PHONY : SLinkedListManipulation.o
+
+# target to build an object file
+SLinkedListManipulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetoSO.dir/build.make CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o
+.PHONY : SLinkedListManipulation.c.o
+
+SLinkedListManipulation.i: SLinkedListManipulation.c.i
+
+.PHONY : SLinkedListManipulation.i
+
+# target to preprocess a source file
+SLinkedListManipulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetoSO.dir/build.make CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.i
+.PHONY : SLinkedListManipulation.c.i
+
+SLinkedListManipulation.s: SLinkedListManipulation.c.s
+
+.PHONY : SLinkedListManipulation.s
+
+# target to generate assembly for a file
+SLinkedListManipulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjetoSO.dir/build.make CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.s
+.PHONY : SLinkedListManipulation.c.s
+
 files.o: files.c.o
 
 .PHONY : files.o
@@ -287,6 +314,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProjetoSO"
+	@echo "... SLinkedListManipulation.o"
+	@echo "... SLinkedListManipulation.i"
+	@echo "... SLinkedListManipulation.s"
 	@echo "... files.o"
 	@echo "... files.i"
 	@echo "... files.s"

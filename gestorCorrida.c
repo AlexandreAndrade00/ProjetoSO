@@ -4,12 +4,14 @@
 
 #include "gestorCorrida.h"
 #include "gestorEquipas.h"
+#include "main.h"
+#include "SLinkedListManipulation.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 //main do gestor de corridas
-void mainGestorCorridas(const int *configOptions) {
+void mainGestorCorrida(const int *configOptions) {
 
     //inicializacao de um gestor de equipa para cada equipa
     for(int i=0; i<*(configOptions + 3); i++) {
@@ -19,6 +21,9 @@ void mainGestorCorridas(const int *configOptions) {
         }
     }
 
-    printf("Estou sozinho");
     sleep(5);
+}
+
+void guardarCarro(char team[], int num, int speed, float consum, int rel) {
+    newNode(sharedVar->listaCarros, team, num, speed, consum, rel);
 }
