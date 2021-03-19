@@ -31,5 +31,17 @@ int* readConfigFile() {
         }
     }
     fclose(fptr);
+
+    //verificar que foram lidos 8 int's
+    if (count != 8) {
+        printf("Ficheiro de configurações inválido!");
+        exit(-1);
+
+    //verificar se existem pelo menos 3 equipas
+    } else if (configOptions[3] < 3) {
+        printf("Equipas insuficientes!");
+        exit(-1);
+    }
+
     return configOptions;
 }

@@ -6,45 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h
-
-/home/alexandre/CLionProjects/ProjetoSO/files.h
-
-/home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.h
-
-/home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.h
-
-/home/alexandre/CLionProjects/ProjetoSO/main.c
+/home/alexandre/CLionProjects/ProjetoSO/files.c
 stdio.h
 -
 stdlib.h
 -
-unistd.h
--
-sys/ipc.h
--
-sys/shm.h
--
-stdio.h
--
-sys/fcntl.h
--
-semaphore.h
--
-sys/types.h
+string.h
 -
 files.h
 /home/alexandre/CLionProjects/ProjetoSO/files.h
-gestorCorrida.h
-/home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.h
-gestorAvarias.h
-/home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.h
-SLinkedListManipulation.h
-/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h
-main.h
-/home/alexandre/CLionProjects/ProjetoSO/main.h
 
-/home/alexandre/CLionProjects/ProjetoSO/main.h
-SLinkedListManipulation.h
-/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.h
+/home/alexandre/CLionProjects/ProjetoSO/files.h
 
