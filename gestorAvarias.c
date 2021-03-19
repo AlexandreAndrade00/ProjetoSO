@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 //main do gestor de avarias
-void mainGestorAvarias(int *configOptions) {
+void mainGestorAvarias() {
     printf("Gestor de avarias operacional!\n");
     sleep(5);
 }

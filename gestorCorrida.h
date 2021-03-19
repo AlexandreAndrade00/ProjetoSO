@@ -5,6 +5,6 @@
 #ifndef PROJETOSO_GESTORCORRIDA_H
 #define PROJETOSO_GESTORCORRIDA_H
 
-void mainGestorCorrida(const int *configOptions);
+void mainGestorCorrida();
 
 #endif //PROJETOSO_GESTORCORRIDA_H

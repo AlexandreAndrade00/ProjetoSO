@@ -51,13 +51,13 @@ void initilization() {
 
     //criar processo gestor de corrida
     if (fork()==0) {
-        mainGestorCorrida(configOptions);
+        mainGestorCorrida();
         exit(0);
     }
 
     //criar processo gestor de avarias
     if (fork()==0) {
-        mainGestorAvarias(configOptions);
+        mainGestorAvarias();
         exit(0);
     }
 }

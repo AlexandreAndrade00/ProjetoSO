@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 //main do gestor de equipas
-void mainGestorEquipas(const int *configOptions) {
+void mainGestorEquipas() {
     printf("Gestor de Equipas operacional!\n");
     sleep(3);
 }

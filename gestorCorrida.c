@@ -11,12 +11,12 @@
 #include <unistd.h>
 
 //main do gestor de corridas
-void mainGestorCorrida(const int *configOptions) {
+void mainGestorCorrida() {
 
     //inicializacao de um gestor de equipa para cada equipa
-    for(int i=0; i<*(configOptions + 3); i++) {
+    for(int i=0; i<*(sharedVar->configOptions + 3); i++) {
         if (fork()==0) {
-            mainGestorEquipas(configOptions);
+            mainGestorEquipas();
             exit(0);
         }
     }

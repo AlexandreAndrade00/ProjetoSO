@@ -5,6 +5,6 @@
 #ifndef PROJETOSO_GESTOREQUIPAS_H
 #define PROJETOSO_GESTOREQUIPAS_H
 
-void mainGestorEquipas(const int *configOptions);
+void mainGestorEquipas();
 
 #endif //PROJETOSO_GESTOREQUIPAS_H

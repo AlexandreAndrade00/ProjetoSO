@@ -5,6 +5,6 @@
 #ifndef PROJETOSO_GESTORAVARIAS_H
 #define PROJETOSO_GESTORAVARIAS_H
 
-void mainGestorAvarias(int *configOptions);
+void mainGestorAvarias();
 
 #endif //PROJETOSO_GESTORAVARIAS_H
