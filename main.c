@@ -22,22 +22,30 @@ int shmid;
 sharedMemory *sharedVar;
 
 sem_t *mutexLog;
+sem_t *mutexConfig;
 
 FILE *logPtr;
 
 int *configOptions;
 
+pid_t corridaPID, avariasPID;
+
+key_t key;
+
 //SIMULADOR DE CORRIDA - PROCESSO PRINCIPAL
 int main(int argc, char *argv[]) {
 
     initilization();
-    sleep(1);
+    waitpid(corridaPID, NULL, 0);
+    waitpid(avariasPID, NULL, 0);
 
     shmctl(shmid, IPC_RMID, NULL);          //desalocar memoria partilhada
     writeLogFile("SIMULATOR CLOSING");
     fclose(logPtr);                             //fechar ficheiro de log
     sem_close(mutexLog);                        //fechar semaforo
+    sem_close(mutexConfig);
     sem_unlink("MUTEXLOG");
+    sem_unlink("MUTEXCONFIG");
 
     return 0;
 }
@@ -46,12 +54,15 @@ int main(int argc, char *argv[]) {
 void initilization() {
 
     //criacao da memoria partilhada
-    shmid = shmget("SHM", sizeof(sharedMemory), IPC_CREAT|0700);
+    shmid = shmget(key, sizeof(sharedMemory), IPC_CREAT|0700);
     sharedVar = (sharedMemory*) shmat(shmid, NULL, 0);
 
     //criacao do semaforo
     sem_unlink("MUTEXLOG");
     mutexLog = sem_open("MUTEXLOG",O_CREAT|O_EXCL,0700,1);
+
+    sem_unlink("MUTEXCONFIG");
+    mutexConfig = sem_open("MUTEXCONFIG",O_CREAT|O_EXCL,0700,1);
 
     //guardar array com configuracoes
     configOptions = readConfigFile();
@@ -61,16 +72,15 @@ void initilization() {
 
     writeLogFile("SIMULATOR STARTING");
     fflush(logPtr);
-    sleep(1);
 
     //criar processo gestor de corrida
-    if (fork()==0) {
+    if ((corridaPID=fork())==0) {
         mainGestorCorrida();
         exit(0);
     }
 
     //criar processo gestor de avarias
-    if (fork()==0) {
+    if ((avariasPID=fork())==0) {
         mainGestorAvarias();
         exit(0);
     }

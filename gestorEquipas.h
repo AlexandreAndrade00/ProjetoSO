@@ -7,4 +7,6 @@
 
 void mainGestorEquipas();
 
+void *car(void *arguments);
+
 #endif //PROJETOSO_GESTOREQUIPAS_H

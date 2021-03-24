@@ -13,14 +13,18 @@
 
 //main do gestor de corridas
 void mainGestorCorrida() {
+    sem_wait(mutexConfig);
+    int numEquipas = *(configOptions + 3);
+    sem_post(mutexConfig);
 
     //inicializacao de um gestor de equipa para cada equipa
-    for(int i=0; i<*(configOptions + 3); i++) {
+    for(int i=0; i<numEquipas; i++) {
         if (fork()==0) {
             mainGestorEquipas();
             exit(0);
         }
     }
+    while (wait(NULL) > 0);
 }
 
 void guardarCarro(char team[], int num, int speed, float consum, int rel) {

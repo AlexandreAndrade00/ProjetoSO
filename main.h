@@ -15,6 +15,7 @@ typedef struct {
 
 extern sharedMemory *sharedVar;     //memoria partilhada
 extern sem_t *mutexLog;             //semaforo
+extern sem_t *mutexConfig;
 extern FILE *logPtr;                //ficheiro log.txt
 extern int *configOptions;          //array com configuracoes
 
