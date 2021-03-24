@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <semaphore.h>
+#include <time.h>
 #include "files.h"
+#include "main.h"
 
 //ler ficheiro com configuracoes
 int* readConfigFile() {
     FILE *fptr;
     char buffer[255];
-    static int configOptions[8];
+    static int configOptions[9];
     char *string, *found;
     int count=0, aux;
 
@@ -33,7 +36,7 @@ int* readConfigFile() {
     fclose(fptr);
 
     //verificar que foram lidos 8 int's
-    if (count != 8) {
+    if (count != 9) {
         printf("Ficheiro de configurações inválido!");
         exit(-1);
 
@@ -44,4 +47,37 @@ int* readConfigFile() {
     }
 
     return configOptions;
+}
+
+//abrir ficheiro log.txt
+FILE* openLogFile() {
+    FILE *fptr;
+
+    if ((fptr = fopen("log.txt", "w")) == NULL) {
+        printf("Something wrong happen!\n");
+        return NULL;
+    }
+
+    return fptr;
+}
+
+//escrever no ficheiro log.txt e stout
+void writeLogFile(char string[]) {
+    char write[512];
+    time_t rawtime;
+    struct tm * timeinfo;
+
+    //atualizar tempo
+    time(&rawtime);
+    //passar tempo para estrutura
+    timeinfo = localtime(&rawtime);
+
+    //concatenar tempo com string de output
+    sprintf(write, "[%d:%d:%d] %s\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec, string);
+
+    //escrever no stdout e log.txt
+    sem_wait(mutexLog);
+    printf("%s", write);
+    fprintf(logPtr, "%s", write);
+    sem_post(mutexLog);
 }

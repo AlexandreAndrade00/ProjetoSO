@@ -9,19 +9,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 //main do gestor de corridas
 void mainGestorCorrida() {
 
     //inicializacao de um gestor de equipa para cada equipa
-    for(int i=0; i<*(sharedVar->configOptions + 3); i++) {
+    for(int i=0; i<*(configOptions + 3); i++) {
         if (fork()==0) {
             mainGestorEquipas();
             exit(0);
         }
     }
-
-    sleep(5);
 }
 
 void guardarCarro(char team[], int num, int speed, float consum, int rel) {

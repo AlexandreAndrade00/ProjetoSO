@@ -4,12 +4,13 @@
 
 #include "gestorAvarias.h"
 #include "main.h"
+#include "files.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <semaphore.h>
 
 //main do gestor de avarias
 void mainGestorAvarias() {
-    printf("Gestor de avarias operacional!\n");
-    sleep(5);
+    writeLogFile("Gestor de avarias operacional!");
 }
