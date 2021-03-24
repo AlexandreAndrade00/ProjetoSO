@@ -4,10 +4,13 @@
 CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o: ../SLinkedListManipulation.c
 CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o: ../SLinkedListManipulation.h
 
+CMakeFiles/ProjetoSO.dir/files.c.o: ../SLinkedListManipulation.h
 CMakeFiles/ProjetoSO.dir/files.c.o: ../files.c
 CMakeFiles/ProjetoSO.dir/files.c.o: ../files.h
+CMakeFiles/ProjetoSO.dir/files.c.o: ../main.h
 
 CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../SLinkedListManipulation.h
+CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../files.h
 CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../gestorAvarias.c
 CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../gestorAvarias.h
 CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../main.h
@@ -18,8 +21,11 @@ CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../gestorCorrida.h
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../gestorEquipas.h
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../main.h
 
+CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o: ../SLinkedListManipulation.h
+CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o: ../files.h
 CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o: ../gestorEquipas.c
 CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o: ../gestorEquipas.h
+CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o: ../main.h
 
 CMakeFiles/ProjetoSO.dir/main.c.o: ../SLinkedListManipulation.h
 CMakeFiles/ProjetoSO.dir/main.c.o: ../files.h
