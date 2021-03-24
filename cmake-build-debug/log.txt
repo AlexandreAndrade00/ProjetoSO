@@ -1,0 +1,8 @@
+[11:27:48] SIMULATOR STARTING
+[11:27:49] Gestor de avarias operacional!
+[11:27:49] Gestor de Equipas operacional!
+[11:27:49] Gestor de Equipas operacional!
+[11:27:49] Gestor de Equipas operacional!
+[11:27:49] Gestor de Equipas operacional!
+[11:27:49] Gestor de Equipas operacional!
+[11:27:50] SIMULATOR CLOSING
