@@ -16,6 +16,7 @@ CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../gestorAvarias.h
 CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o: ../main.h
 
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../SLinkedListManipulation.h
+CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../files.h
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../gestorCorrida.c
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../gestorCorrida.h
 CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o: ../gestorEquipas.h
