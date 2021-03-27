@@ -36,16 +36,8 @@ key_t key;
 int main(int argc, char *argv[]) {
 
     initilization();
-    waitpid(corridaPID, NULL, 0);
-    waitpid(avariasPID, NULL, 0);
 
-    shmctl(shmid, IPC_RMID, NULL);          //desalocar memoria partilhada
-    writeLogFile("SIMULATOR CLOSING");
-    fclose(logPtr);                             //fechar ficheiro de log
-    sem_close(mutexLog);                        //fechar semaforo
-    sem_close(mutexConfig);
-    sem_unlink("MUTEXLOG");
-    sem_unlink("MUTEXCONFIG");
+    closeProgram();
 
     return 0;
 }
@@ -88,4 +80,18 @@ void initilization() {
         mainGestorAvarias();
         exit(0);
     }
+}
+
+void closeProgram() {
+
+    waitpid(corridaPID, NULL, 0);
+    waitpid(avariasPID, NULL, 0);
+
+    shmctl(shmid, IPC_RMID, NULL);          //desalocar memoria partilhada
+    writeLogFile("SIMULATOR CLOSING");
+    fclose(logPtr);                             //fechar ficheiro de log
+    sem_close(mutexLog);                        //fechar semaforo
+    sem_close(mutexConfig);
+    sem_unlink("MUTEXLOG");
+    sem_unlink("MUTEXCONFIG");
 }

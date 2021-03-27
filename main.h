@@ -21,4 +21,6 @@ extern int *configOptions;          //array com configuracoes
 
 void initilization();
 
+void closeProgram();
+
 #endif //PROJETOSO_MAIN_H
