@@ -6,6 +6,7 @@
 #include "gestorEquipas.h"
 #include "main.h"
 #include "SLinkedListManipulation.h"
+#include "files.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -13,9 +14,8 @@
 
 //main do gestor de corridas
 void mainGestorCorrida() {
-    sem_wait(mutexConfig);
-    int numEquipas = *(configOptions + 3);
-    sem_post(mutexConfig);
+
+    int numEquipas = accessConfigOptions(3);
 
     //inicializacao de um gestor de equipa para cada equipa
     for(int i=0; i<numEquipas; i++) {

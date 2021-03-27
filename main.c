@@ -65,10 +65,14 @@ void initilization() {
     mutexConfig = sem_open("MUTEXCONFIG",O_CREAT|O_EXCL,0700,1);
 
     //guardar array com configuracoes
-    configOptions = readConfigFile();
+    if ((configOptions = readConfigFile())==NULL)
+        exit(-1);
 
     //abrir ficheiro para escrever log's
-    logPtr = openLogFile();
+    if ((logPtr = openLogFile())==NULL) {
+        printf("Sem permissoes para criar ficheiro de log!\n");
+        exit(-1);
+    }
 
     writeLogFile("SIMULATOR STARTING");
     fflush(logPtr);

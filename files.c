@@ -81,3 +81,14 @@ void writeLogFile(char string[]) {
     fprintf(logPtr, "%s", write);
     sem_post(mutexLog);
 }
+
+//acesso sincronizado array com configuracoes
+int accessConfigOptions(int index) {
+    int aux;
+
+    sem_wait(mutexConfig);
+    aux = *(configOptions + index);
+    sem_post(mutexConfig);
+
+    return aux;
+}

@@ -13,9 +13,7 @@
 //main do gestor de equipas
 void mainGestorEquipas() {
 
-    sem_wait(mutexConfig);
-    int numCarros = *(configOptions + 4);
-    sem_post(mutexConfig);
+    int numCarros = accessConfigOptions(4);
 
     pthread_t my_thread[numCarros];
 
