@@ -21,24 +21,12 @@ int shmid;
 //variavel onde esta alocada a memoria
 sharedMemory *sharedVar;
 
-sem_t *mutexLog;
-sem_t *mutexConfig;
-
-FILE *logPtr;
-
-int *configOptions;
-
-pid_t corridaPID, avariasPID;
-
 key_t key;
 
 //SIMULADOR DE CORRIDA - PROCESSO PRINCIPAL
 int main(int argc, char *argv[]) {
-
     initilization();
-
     closeProgram();
-
     return 0;
 }
 
@@ -51,47 +39,41 @@ void initilization() {
 
     //criacao do semaforo
     sem_unlink("MUTEXLOG");
-    mutexLog = sem_open("MUTEXLOG",O_CREAT|O_EXCL,0700,1);
-
-    sem_unlink("MUTEXCONFIG");
-    mutexConfig = sem_open("MUTEXCONFIG",O_CREAT|O_EXCL,0700,1);
+    sharedVar->mutexLog = sem_open("MUTEXLOG",O_CREAT|O_EXCL,0700,1);
 
     //guardar array com configuracoes
-    if ((configOptions = readConfigFile())==NULL)
+    if ((sharedVar->configOptions = readConfigFile())==NULL)
         exit(-1);
 
     //abrir ficheiro para escrever log's
-    if ((logPtr = openLogFile())==NULL) {
+    if ((sharedVar->logPtr = openLogFile())==NULL) {
         printf("Sem permissoes para criar ficheiro de log!\n");
         exit(-1);
     }
 
     writeLogFile("SIMULATOR STARTING");
-    fflush(logPtr);
+    fflush(sharedVar->logPtr);
 
     //criar processo gestor de corrida
-    if ((corridaPID=fork())==0) {
+    if (fork()==0) {
         mainGestorCorrida();
         exit(0);
     }
 
     //criar processo gestor de avarias
-    if ((avariasPID=fork())==0) {
+    if (fork()==0) {
         mainGestorAvarias();
         exit(0);
     }
 }
 
+//aguardar processos e desalocar memoria e semaforos
 void closeProgram() {
-
-    waitpid(corridaPID, NULL, 0);
-    waitpid(avariasPID, NULL, 0);
+    while (wait(NULL) > 0);
 
     shmctl(shmid, IPC_RMID, NULL);          //desalocar memoria partilhada
     writeLogFile("SIMULATOR CLOSING");
-    fclose(logPtr);                             //fechar ficheiro de log
-    sem_close(mutexLog);                        //fechar semaforo
-    sem_close(mutexConfig);
+    fclose(sharedVar->logPtr);                  //fechar ficheiro de log
+    sem_close(sharedVar->mutexLog);             //fechar semaforo
     sem_unlink("MUTEXLOG");
-    sem_unlink("MUTEXCONFIG");
 }

@@ -76,19 +76,13 @@ void writeLogFile(char string[]) {
     sprintf(write, "[%d:%d:%d] %s\n", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec, string);
 
     //escrever no stdout e log.txt
-    sem_wait(mutexLog);
+    sem_wait(sharedVar->mutexLog);
     printf("%s", write);
-    fprintf(logPtr, "%s", write);
-    sem_post(mutexLog);
+    fprintf(sharedVar->logPtr, "%s", write);
+    sem_post(sharedVar->mutexLog);
 }
 
-//acesso sincronizado array com configuracoes
+//acesso array com configuracoes
 int accessConfigOptions(int index) {
-    int aux;
-
-    sem_wait(mutexConfig);
-    aux = *(configOptions + index);
-    sem_post(mutexConfig);
-
-    return aux;
+    return *(sharedVar->configOptions + index);
 }
