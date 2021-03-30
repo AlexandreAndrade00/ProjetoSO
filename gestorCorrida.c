@@ -5,7 +5,6 @@
 #include "gestorCorrida.h"
 #include "gestorEquipas.h"
 #include "main.h"
-#include "SLinkedListManipulation.h"
 #include "files.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,5 +27,5 @@ void mainGestorCorrida() {
 }
 
 void guardarCarro(char team[], int num, int speed, float consum, int rel) {
-    newNode(sharedVar->listaCarros, team, num, speed, consum, rel);
+    //TODO
 }

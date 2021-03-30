@@ -14,6 +14,13 @@
 void mainGestorEquipas() {
 
     int numCarros = accessConfigOptions(4);
+    int myIndex;
+
+    sem_wait(sharedVar->mutexBox);
+    myIndex=sharedVar->freeIndexBox;
+    sharedVar->freeIndexBox++;
+    sem_post(sharedVar->mutexBox);
+    sharedVar->boxList[myIndex].boxState=2;
 
     pthread_t my_thread[numCarros];
 

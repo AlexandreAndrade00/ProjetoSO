@@ -11,7 +11,6 @@
 #include "files.h"
 #include "gestorCorrida.h"
 #include "gestorAvarias.h"
-#include "SLinkedListManipulation.h"
 #include "main.h"
 #include "files.h"
 
@@ -40,6 +39,8 @@ void initilization() {
     //criacao do semaforo
     sem_unlink("MUTEXLOG");
     sharedVar->mutexLog = sem_open("MUTEXLOG",O_CREAT|O_EXCL,0700,1);
+    sem_unlink("MUTEXBOX");
+    sharedVar->mutexBox = sem_open("MUTEXBOX",O_CREAT|O_EXCL,0700,1);
 
     //guardar array com configuracoes
     if ((sharedVar->configOptions = readConfigFile())==NULL)
@@ -76,4 +77,6 @@ void closeProgram() {
     fclose(sharedVar->logPtr);                  //fechar ficheiro de log
     sem_close(sharedVar->mutexLog);             //fechar semaforo
     sem_unlink("MUTEXLOG");
+    sem_close(sharedVar->mutexBox);             //fechar semaforo
+    sem_unlink("MUTEXBOX");
 }
