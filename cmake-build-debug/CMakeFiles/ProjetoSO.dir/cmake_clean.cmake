@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o"
   "CMakeFiles/ProjetoSO.dir/files.c.o"
   "CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o"
   "CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o"

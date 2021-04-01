@@ -12,6 +12,4 @@ FILE* openLogFile();
 
 void writeLogFile(char string[]);
 
-int accessConfigOptions(int index);
-
 #endif //PROJETOSO_FILES_H

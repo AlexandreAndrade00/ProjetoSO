@@ -81,8 +81,3 @@ void writeLogFile(char string[]) {
     fprintf(sharedVar->logPtr, "%s", write);
     sem_post(sharedVar->mutexLog);
 }
-
-//acesso array com configuracoes
-int accessConfigOptions(int index) {
-    return *(sharedVar->configOptions + index);
-}

@@ -36,7 +36,7 @@ void initilization() {
     shmid = shmget(key, sizeof(sharedMemory), IPC_CREAT|0700);
     sharedVar = (sharedMemory*) shmat(shmid, NULL, 0);
 
-    //criacao do semaforo
+    //criacao de semaforos
     sem_unlink("MUTEXLOG");
     sharedVar->mutexLog = sem_open("MUTEXLOG",O_CREAT|O_EXCL,0700,1);
     sem_unlink("MUTEXBOX");
@@ -51,6 +51,12 @@ void initilization() {
         printf("Sem permissoes para criar ficheiro de log!\n");
         exit(-1);
     }
+
+    //declaracao de arrays onde estara informacao sobre as boxes e carros
+    nodeCarro listaCarros[sharedVar->configOptions[3] * sharedVar->configOptions[4]];
+    sharedVar->listaCarros=listaCarros;
+    nodeTeam boxList[sharedVar->configOptions[3]];
+    sharedVar->boxList=boxList;
 
     writeLogFile("SIMULATOR STARTING");
     fflush(sharedVar->logPtr);

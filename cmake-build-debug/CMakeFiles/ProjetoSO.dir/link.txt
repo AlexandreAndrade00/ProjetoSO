@@ -1,1 +1,1 @@
-/usr/bin/cc  -Wall -pthread -g   CMakeFiles/ProjetoSO.dir/main.c.o CMakeFiles/ProjetoSO.dir/files.c.o CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o  -o ProjetoSO 
+/usr/bin/cc  -Wall -pthread -g   CMakeFiles/ProjetoSO.dir/main.c.o CMakeFiles/ProjetoSO.dir/files.c.o CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o CMakeFiles/ProjetoSO.dir/gestorEquipas.c.o  -o ProjetoSO 

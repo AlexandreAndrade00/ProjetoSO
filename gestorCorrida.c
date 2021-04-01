@@ -14,7 +14,7 @@
 //main do gestor de corridas
 void mainGestorCorrida() {
 
-    int numEquipas = accessConfigOptions(3);
+    int numEquipas = sharedVar->configOptions[3];
 
     //inicializacao de um gestor de equipa para cada equipa
     for(int i=0; i<numEquipas; i++) {

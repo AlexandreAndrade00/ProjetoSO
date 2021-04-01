@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/alexandre/CLionProjects/ProjetoSO/SLinkedListManipulation.c" "/home/alexandre/CLionProjects/ProjetoSO/cmake-build-debug/CMakeFiles/ProjetoSO.dir/SLinkedListManipulation.c.o"
   "/home/alexandre/CLionProjects/ProjetoSO/files.c" "/home/alexandre/CLionProjects/ProjetoSO/cmake-build-debug/CMakeFiles/ProjetoSO.dir/files.c.o"
   "/home/alexandre/CLionProjects/ProjetoSO/gestorAvarias.c" "/home/alexandre/CLionProjects/ProjetoSO/cmake-build-debug/CMakeFiles/ProjetoSO.dir/gestorAvarias.c.o"
   "/home/alexandre/CLionProjects/ProjetoSO/gestorCorrida.c" "/home/alexandre/CLionProjects/ProjetoSO/cmake-build-debug/CMakeFiles/ProjetoSO.dir/gestorCorrida.c.o"

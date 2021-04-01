@@ -1,18 +1,18 @@
-[0:3:15] SIMULATOR STARTING
-[0:3:15] Gestor de avarias operacional!
-[0:3:15] Gestor de Equipas operacional!
-[0:3:15] Carro inicializado
-[0:3:15] Carro inicializado
-[0:3:15] Gestor de Equipas operacional!
-[0:3:15] Carro inicializado
-[0:3:15] Carro inicializado
-[0:3:15] Gestor de Equipas operacional!
-[0:3:15] Carro inicializado
-[0:3:15] Carro inicializado
-[0:3:15] Gestor de Equipas operacional!
-[0:3:15] Carro inicializado
-[0:3:15] Carro inicializado
-[0:3:15] Gestor de Equipas operacional!
-[0:3:15] Carro inicializado
-[0:3:15] Carro inicializado
-[0:3:15] SIMULATOR CLOSING
+[17:0:8] SIMULATOR STARTING
+[17:0:8] Gestor de avarias operacional!
+[17:0:8] Gestor de Equipas operacional!
+[17:0:8] Carro inicializado
+[17:0:8] Carro inicializado
+[17:0:8] Gestor de Equipas operacional!
+[17:0:8] Carro inicializado
+[17:0:8] Carro inicializado
+[17:0:8] Gestor de Equipas operacional!
+[17:0:8] Carro inicializado
+[17:0:8] Carro inicializado
+[17:0:8] Gestor de Equipas operacional!
+[17:0:8] Carro inicializado
+[17:0:8] Carro inicializado
+[17:0:8] Gestor de Equipas operacional!
+[17:0:8] Carro inicializado
+[17:0:8] Carro inicializado
+[17:0:8] SIMULATOR CLOSING

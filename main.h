@@ -7,33 +7,31 @@
 
 #ifndef PROJETOSO_MAIN_H
 #define PROJETOSO_MAIN_H
-#define MAX_CARS 1024
-#define MAX_TEAMS 128
 
-typedef struct nodeCarro {
+typedef struct {
     char team[20];
     int numCarro;
-    int speed;
+    int speed;                  //info dos carros
     float consumption;
     int reliability;
 } nodeCarro;
 
 typedef struct {
-    int boxState;
+    int boxState;               //estado da box; 2-livre 1-reservada 0-ocupada
 } nodeTeam;
 
 typedef struct {
-    nodeCarro listaCarros[MAX_CARS];
-    int freeIndexCar;
-    nodeTeam boxList[MAX_TEAMS];
-    int freeIndexBox;
-    sem_t *mutexLog;
-    sem_t *mutexBox;
-    int *configOptions;
-    FILE *logPtr;
+    nodeCarro *listaCarros;     //array com carros
+    nodeTeam *boxList;          //array com boxes
+    int freeIndexCar;           //index livre no array dos carros
+    int freeIndexBox;           //index livre no array das boxes
+    sem_t *mutexLog;            //semaforo para escrever um de cada vez no ficheiro e stdout
+    sem_t *mutexBox;            //semaforo para um de cada vez entrar no array das boxes
+    int *configOptions;         //array com info fo ficheiro de configuracoes
+    FILE *logPtr;               //ficheiro log
 } sharedMemory;
 
-extern sharedMemory *sharedVar;     //memoria partilhada
+extern sharedMemory *sharedVar; //memoria partilhada
 
 void initilization();
 
