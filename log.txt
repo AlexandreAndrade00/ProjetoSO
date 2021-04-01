@@ -1,0 +1,18 @@
+[18:52:59] SIMULATOR STARTING
+[18:52:59] Gestor de avarias operacional!
+[18:52:59] Gestor de Equipas operacional!
+[18:52:59] Carro inicializado
+[18:52:59] Carro inicializado
+[18:52:59] Gestor de Equipas operacional!
+[18:52:59] Carro inicializado
+[18:52:59] Carro inicializado
+[18:52:59] Gestor de Equipas operacional!
+[18:52:59] Carro inicializado
+[18:52:59] Carro inicializado
+[18:52:59] Gestor de Equipas operacional!
+[18:52:59] Carro inicializado
+[18:52:59] Carro inicializado
+[18:52:59] Gestor de Equipas operacional!
+[18:52:59] Carro inicializado
+[18:52:59] Carro inicializado
+[18:52:59] SIMULATOR CLOSING
