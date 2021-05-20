@@ -1,18 +1,82 @@
-[18:52:59] SIMULATOR STARTING
-[18:52:59] Gestor de avarias operacional!
-[18:52:59] Gestor de Equipas operacional!
-[18:52:59] Carro inicializado
-[18:52:59] Carro inicializado
-[18:52:59] Gestor de Equipas operacional!
-[18:52:59] Carro inicializado
-[18:52:59] Carro inicializado
-[18:52:59] Gestor de Equipas operacional!
-[18:52:59] Carro inicializado
-[18:52:59] Carro inicializado
-[18:52:59] Gestor de Equipas operacional!
-[18:52:59] Carro inicializado
-[18:52:59] Carro inicializado
-[18:52:59] Gestor de Equipas operacional!
-[18:52:59] Carro inicializado
-[18:52:59] Carro inicializado
-[18:52:59] SIMULATOR CLOSING
+[21:18:54] SIMULATOR STARTING
+[21:18:54] Gestor de avarias operacional!
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 50, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 55, SPEED: 50, CONSUMPTION: 100.000000, RELIABILITY: 95
+[21:18:58] Equipa A cheia!
+[21:18:58] NEW CAR LOADED => TEAM: B, CAR: 77, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] NEW CAR LOADED => TEAM: B, CAR: 88, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] Equipa B cheia!
+[21:18:58] Gestor de Equipas operacional!
+[21:18:58] Gestor de Equipas operacional!
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 50, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 55, SPEED: 50, CONSUMPTION: 100.000000, RELIABILITY: 95
+[21:18:58] Equipa A cheia!
+[21:18:58] Gestor de Equipas operacional!
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 50, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] NEW CAR LOADED => TEAM: A, CAR: 55, SPEED: 50, CONSUMPTION: 100.000000, RELIABILITY: 95
+[21:18:58] Equipa A cheia!
+[21:18:58] NEW CAR LOADED => TEAM: B, CAR: 77, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] NEW CAR LOADED => TEAM: B, CAR: 88, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:58] Equipa B cheia!
+[21:18:58] NEW CAR LOADED => TEAM: C, CAR: 81, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:59] NEW CAR LOADED => TEAM: C, CAR: 91, SPEED: 50, CONSUMPTION: 0.040000, RELIABILITY: 95
+[21:18:59] Equipa C cheia!
+[21:19:3] CARRO 55 DA EQUIPA A MUDOU PARA O ESTADO SEGURANCA
+[21:19:4] CARRO 55 DA EQUIPA A FICOU SEM COMBUSTIVEL!
+[21:19:39] CARRO 88 DA EQUIPA B MUDOU PARA O ESTADO BOX
+[21:19:39] CARRO 91 DA EQUIPA C MUDOU PARA O ESTADO BOX
+[21:19:40] CARRO 88 DA EQUIPA B MUDOU PARA O ESTADO CORRIDA
+[21:19:40] CARRO 91 DA EQUIPA C MUDOU PARA O ESTADO CORRIDA
+[21:19:51] CARRO 77 DA EQUIPA B MUDOU PARA O ESTADO BOX
+[21:19:51] CARRO 81 DA EQUIPA C MUDOU PARA O ESTADO BOX
+[21:19:52] CARRO 77 DA EQUIPA B MUDOU PARA O ESTADO CORRIDA
+[21:19:52] CARRO 81 DA EQUIPA C MUDOU PARA O ESTADO CORRIDA
+[21:20:0] CARRO 50 DA EQUIPA A MUDOU PARA O ESTADO SEGURANCA
+[21:20:4] CARRO 88 DA EQUIPA B TERMINOU A CORRIDA EM 1º LUGAR!
+[21:20:4] CARRO 81 DA EQUIPA C TERMINOU A CORRIDA EM 2º LUGAR!
+[21:20:4] CARRO 77 DA EQUIPA B TERMINOU A CORRIDA EM 3º LUGAR!
+[21:20:4] CARRO 91 DA EQUIPA C TERMINOU A CORRIDA EM 4º LUGAR!
+[21:20:12] CARRO 50 DA EQUIPA A TERMINOU A CORRIDA EM 5º LUGAR!
+[21:20:12] -------------------------------------ESTATISTICAS-----------------------------------------
+[21:20:12] 1º LUGAR - Carro: 88, Equipa: B, Voltas: 5, Paragens Box: 1
+[21:20:12] 2º LUGAR - Carro: 81, Equipa: C, Voltas: 5, Paragens Box: 1
+[21:20:12] 3º LUGAR - Carro: 77, Equipa: B, Voltas: 5, Paragens Box: 1
+[21:20:12] 4º LUGAR - Carro: 91, Equipa: C, Voltas: 5, Paragens Box: 1
+[21:20:12] 5º LUGAR - Carro: 50, Equipa: A, Voltas: 5, Paragens Box: 0
+[21:20:12] ULTIMO LUGAR - Carro: 55, Equipa: A, Voltas: 0, Paragens Box: 0
+[21:20:12] Total de avarias: 0
+[21:20:12] Total de abastecimentos: 4
+[21:20:12] Carros na pista: 0
+--------------------------------------------------------------------------------------------
+[21:20:24] CARRO 55 DA EQUIPA A MUDOU PARA O ESTADO SEGURANCA
+[21:20:25] CARRO 55 DA EQUIPA A FICOU SEM COMBUSTIVEL!
+[21:20:36] CARRO 50 DA EQUIPA A TERMINOU A CORRIDA EM 1º LUGAR!
+[21:20:36] CARRO 88 DA EQUIPA B TERMINOU A CORRIDA EM 2º LUGAR!
+[21:20:36] CARRO 81 DA EQUIPA C TERMINOU A CORRIDA EM 3º LUGAR!
+[21:20:36] CARRO 91 DA EQUIPA C TERMINOU A CORRIDA EM 4º LUGAR!
+[21:20:36] CARRO 77 DA EQUIPA B TERMINOU A CORRIDA EM 5º LUGAR!
+[21:20:36] -------------------------------------ESTATISTICAS-----------------------------------------
+[21:20:36] 1º LUGAR - Carro: 50, Equipa: A, Voltas: 1, Paragens Box: 0
+[21:20:36] 2º LUGAR - Carro: 88, Equipa: B, Voltas: 1, Paragens Box: 0
+[21:20:36] 3º LUGAR - Carro: 81, Equipa: C, Voltas: 1, Paragens Box: 0
+[21:20:36] 4º LUGAR - Carro: 91, Equipa: C, Voltas: 1, Paragens Box: 0
+[21:20:36] 5º LUGAR - Carro: 77, Equipa: B, Voltas: 1, Paragens Box: 0
+[21:20:36] ULTIMO LUGAR - Carro: 55, Equipa: A, Voltas: 0, Paragens Box: 0
+[21:20:36] Total de avarias: 0
+[21:20:36] Total de abastecimentos: 0
+[21:20:36] Carros na pista: 0
+--------------------------------------------------------------------------------------------
+[21:19:15]  SIGNAL SIGTSTP RECEIVED
+[21:19:15] -------------------------------------ESTATISTICAS-----------------------------------------
+[21:19:15] 1º LUGAR - Carro: 50, Equipa: A, Voltas: 0, Paragens Box: 0
+[21:19:15] 2º LUGAR - Carro: 77, Equipa: B, Voltas: 0, Paragens Box: 0
+[21:19:15] 3º LUGAR - Carro: 88, Equipa: B, Voltas: 0, Paragens Box: 0
+[21:19:15] 4º LUGAR - Carro: 81, Equipa: C, Voltas: 0, Paragens Box: 0
+[21:19:15] 5º LUGAR - Carro: 91, Equipa: C, Voltas: 0, Paragens Box: 0
+[21:19:15] ULTIMO LUGAR - Carro: 55, Equipa: A, Voltas: 0, Paragens Box: 0
+[21:19:15] Total de avarias: 0
+[21:19:15] Total de abastecimentos: 0
+[21:19:15] Carros na pista: 5
+--------------------------------------------------------------------------------------------
+[21:20:29] SIGNAL SIGINT RECEIVED
+[21:20:36] SIMULATOR CLOSING

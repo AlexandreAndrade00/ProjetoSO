@@ -1,7 +1,8 @@
-//
-// Created by alexandre on 15/03/21.
-//
+//FEITO POR ALEXANDRE ANDRADE - 2019220216
+
+#include "main.h"
 #include <stdio.h>
+#include <time.h>
 
 #ifndef PROJETOSO_FILES_H
 #define PROJETOSO_FILES_H

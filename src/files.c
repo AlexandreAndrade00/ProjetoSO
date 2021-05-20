@@ -1,10 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <semaphore.h>
-#include <time.h>
+//FEITO POR ALEXANDRE ANDRADE - 2019220216
+
 #include "files.h"
-#include "main.h"
 
 //ler ficheiro com configuracoes
 int* readConfigFile() {
@@ -16,7 +12,7 @@ int* readConfigFile() {
 
     //abrir ficheiro
     if ((fptr = fopen("config", "r")) == NULL) {
-        printf("File doesn't exist!\n");
+        writeLogFile("File doesn't exist!");
         return NULL;
     }
 
@@ -37,12 +33,12 @@ int* readConfigFile() {
 
     //verificar que foram lidos 9 int's
     if (count != 9) {
-        printf("Ficheiro de configurações inválido!\n");
+        writeLogFile("Ficheiro de configurações inválido!");
         exit(-1);
 
     //verificar se existem pelo menos 3 equipas
     } else if (configOptions[3] < 3) {
-        printf("Equipas insuficientes!\n");
+        writeLogFile("Equipas insuficientes!");
         exit(-1);
     }
 
@@ -54,7 +50,7 @@ FILE* openLogFile() {
     FILE *fptr;
 
     if ((fptr = fopen("log.txt", "w")) == NULL) {
-        printf("Something wrong happen!\n");
+        writeLogFile("Something wrong happen!");
         return NULL;
     }
 
@@ -63,7 +59,7 @@ FILE* openLogFile() {
 
 //escrever no ficheiro log.txt e stout
 void writeLogFile(char string[]) {
-    char write[512];
+    char write[1024];
     time_t rawtime;
     struct tm * timeinfo;
 
